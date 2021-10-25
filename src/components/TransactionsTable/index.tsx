@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../TransactionsContext";
+import { useTransactions } from "../../hooks/useTransactions";
 import { Container } from "./styles";
 
 export function TransactionsTable() {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
 
   return (
     <Container>
@@ -33,4 +32,8 @@ export function TransactionsTable() {
       </table>
     </Container>
   )
+}
+
+function uuseTransactions(): { transactions: any; } {
+  throw new Error("Function not implemented.");
 }
